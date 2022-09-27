@@ -1,7 +1,7 @@
 package com.company;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         // Задание №1
         // поздравление пользователя с совершеннолетием, если ему равно или больше 18 лет;
         // информационное сообщение, что возраст совершеннолетия ещё не наступил, и нужно немного подождать.
@@ -13,48 +13,42 @@ public class Main {
         if(age < 18){
             System.out.println("Возраст совершеннолетия еще не наступил, нужно немного подождать");
         }
-
-
         // Задание №2
         //ребенок ходит в школу, если его возраст равен или больше 7 годам
         //человек уже закончил школу и может отправляться в университет, если его возраст 18 и больше;
         //человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет.
         System.out.println("Задание №2");
-        byte childOld = 8; // ребенку 8 лет
-        if(childOld >= 7){
+        byte Year_Old = 24; // возраст
+        if(Year_Old >= 7 && Year_Old < 18) {
             System.out.println("Ребенок ходит в школу");
         }
-        byte humanOld = 18; // возраст
-        if(humanOld >= 18){
+        if(Year_Old >= 18 && Year_Old < 24) {
             System.out.println("Человек уже закончил школу и может отправляться в университет");
         }
-        byte HumanOld = 24; // возраст
-        if(HumanOld >= 24){
+        if(Year_Old >= 24){
             System.out.println("Человек окончил университет и ему пора искать первую работу");
         }
-
-
         // Задание №3
         // Вместимость одного вагона поезда составляет 102 человека. Вагон рассчитан на 60 сидячих мест,
         // все остальные – стоячие.
         // Напишите программу, которая выводит в консоль сообщение о том,
         // есть ли место в вагоне: сидячее или стоячее или вагон уже полностью забит.
         System.out.println("Задание №3");
-        byte railway_carriage = 102; // вместимость вагона
-        byte seat = 60; // 60 сидячих мест в вагоне
-        byte place = 59; // занятые места
+        int railway_carriage = 102; // вместимость вагона
+        int seat = 60; // 60 сидячих мест в вагоне
+        int freePlaceStandUp = railway_carriage - seat; // стоячих мест в вагоне
+        int place = 65; // занятые места
         if(place >= seat && place < railway_carriage) {
-            System.out.println("В вагоне остались стоячие места");
+            freePlaceStandUp = railway_carriage - place;
+            System.out.println("В вагоне остались стоячие места "+ freePlaceStandUp);
         }
         if (place<seat){
-            System.out.println("В вагоне есть сидячие места");
+            seat = seat - place;
+            System.out.println("В вагоне есть сидячие места "+ seat);
         }
         if (place >= railway_carriage) {
             System.out.println("В вагоне нет мест");
         }
-
-
-
         // Задание №1.1
         //С помощью условного оператора и конструкции else перепишите программу, которая выводит в консоль:
         //поздравление пользователя с совершеннолетием, если ему равно или больше 18 лет;
@@ -66,8 +60,6 @@ public class Main {
         } else {
             System.out.println("Возраст совершеннолетия ещё не наступил, нужно немного подождать");
         }
-
-
         // Задание №1.2
         //С помощью условного оператора и конструкции else перепишите программу, которая выводит
         // в консоль сообщение о том, что:
@@ -75,23 +67,15 @@ public class Main {
         //человек уже закончил школу и может отправляться в университет, если его возраст 18 и больше;
         //человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет.
         System.out.println("Задание №1.2");
-        byte yearOld = 6; // возраст
-        if(yearOld >= 7) {
+        byte yearOld = 5; // возраст
+        if(yearOld >= 7 && yearOld <= 18) {
             System.out.println("Ребенок ходит в школу");
-        } else {
-            System.out.println("Ребенок ходит в садик");
-        }
-        byte yearOld1 = 18; // возраст
-        if(yearOld1 >= 18){
+        } else if(yearOld > 18 && yearOld < 24) {
             System.out.println("Человек уже закончил школу и может отправляться в университет");
-        } else {
-            System.out.println("Человек еще не закончил школу");
-        }
-        byte YearOld1 = 25; // возраст
-        if(YearOld1 >= 24){
+        } else if (yearOld >= 24){
             System.out.println("Человек окончил университет и ему пора искать первую работу");
         } else {
-            System.out.println("Человек еще не окончил университет");
+            System.out.println("Ребенок ходит в садик");
         }
 
 
@@ -101,13 +85,16 @@ public class Main {
         //С помощью условного оператора и конструкции else перепишите программу, которая выводит
         // в консоль сообщение о том, есть ли место в вагоне: сидячее или стоячее или вагон уже полностью забит.
         System.out.println("Задание №1.3");
-        short placeInTrain = 102; // вместимость вагона
-        short seat1 = 60; // 60 сидячих мест в вагоне
-        short place1 = 63; // занятые места
+        int placeInTrain = 102; // вместимость вагона
+        int seat1 = 60; // 60 сидячих мест в вагоне
+        int FreePlaceStand_Up = placeInTrain - seat1; // стоячих мест в вагоне
+        int place1 = 59; // занятые места
         if(place1 >= seat1 && place1 < placeInTrain) {
-            System.out.println("В вагоне остались стоячие места");
+            FreePlaceStand_Up= placeInTrain - place1;
+            System.out.println("В вагоне остались стоячие места "+ FreePlaceStand_Up);
         } else if(place1<seat1) {
-            System.out.println("В вагоне есть сидячие места");
+            seat1 = seat1 - place1;
+            System.out.println("В вагоне есть сидячие места " + seat1);
         } else if(place1 >= placeInTrain) {
             System.out.println("В вагоне нет мест");
         }
