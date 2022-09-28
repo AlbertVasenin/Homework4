@@ -1,16 +1,16 @@
 package com.company;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // Задание №1
         // поздравление пользователя с совершеннолетием, если ему равно или больше 18 лет;
         // информационное сообщение, что возраст совершеннолетия ещё не наступил, и нужно немного подождать.
         System.out.println("Задание №1");
         byte age = 17; // заданный возраст
-        if(age >= 18){
+        if (age >= 18) {
             System.out.println("Поздравляю вас с совершеннолетием");
         }
-        if(age < 18){
+        if (age < 18) {
             System.out.println("Возраст совершеннолетия еще не наступил, нужно немного подождать");
         }
         // Задание №2
@@ -19,13 +19,13 @@ public class Main {
         //человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет.
         System.out.println("Задание №2");
         byte Year_Old = 24; // возраст
-        if(Year_Old >= 7 && Year_Old < 18) {
+        if (Year_Old >= 7 && Year_Old < 18) {
             System.out.println("Ребенок ходит в школу");
         }
-        if(Year_Old >= 18 && Year_Old < 24) {
+        if (Year_Old >= 18 && Year_Old < 24) {
             System.out.println("Человек уже закончил школу и может отправляться в университет");
         }
-        if(Year_Old >= 24){
+        if (Year_Old >= 24) {
             System.out.println("Человек окончил университет и ему пора искать первую работу");
         }
         // Задание №3
@@ -38,13 +38,13 @@ public class Main {
         int seat = 60; // 60 сидячих мест в вагоне
         int freePlaceStandUp = railway_carriage - seat; // стоячих мест в вагоне
         int place = 65; // занятые места
-        if(place >= seat && place < railway_carriage) {
+        if (place >= seat && place < railway_carriage) {
             freePlaceStandUp = railway_carriage - place;
-            System.out.println("В вагоне остались стоячие места "+ freePlaceStandUp);
+            System.out.println("В вагоне остались стоячие места " + freePlaceStandUp);
         }
-        if (place<seat){
+        if (place < seat) {
             seat = seat - place;
-            System.out.println("В вагоне есть сидячие места "+ seat);
+            System.out.println("В вагоне есть сидячие места " + seat);
         }
         if (place >= railway_carriage) {
             System.out.println("В вагоне нет мест");
@@ -55,7 +55,7 @@ public class Main {
         //информационное сообщение, что возраст совершеннолетия ещё не наступил, и нужно немного подождать.
         System.out.println("Задание №1.1");
         byte age1 = 18;
-        if(age1>=18){
+        if (age1 >= 18) {
             System.out.println("Поздравляем с совершеннолетием");
         } else {
             System.out.println("Возраст совершеннолетия ещё не наступил, нужно немного подождать");
@@ -68,11 +68,11 @@ public class Main {
         //человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет.
         System.out.println("Задание №1.2");
         byte yearOld = 5; // возраст
-        if(yearOld >= 7 && yearOld <= 18) {
+        if (yearOld >= 7 && yearOld <= 18) {
             System.out.println("Ребенок ходит в школу");
-        } else if(yearOld > 18 && yearOld < 24) {
+        } else if (yearOld > 18 && yearOld < 24) {
             System.out.println("Человек уже закончил школу и может отправляться в университет");
-        } else if (yearOld >= 24){
+        } else if (yearOld >= 24) {
             System.out.println("Человек окончил университет и ему пора искать первую работу");
         } else {
             System.out.println("Ребенок ходит в садик");
@@ -89,13 +89,13 @@ public class Main {
         int seat1 = 60; // 60 сидячих мест в вагоне
         int FreePlaceStand_Up = placeInTrain - seat1; // стоячих мест в вагоне
         int place1 = 59; // занятые места
-        if(place1 >= seat1 && place1 < placeInTrain) {
-            FreePlaceStand_Up= placeInTrain - place1;
-            System.out.println("В вагоне остались стоячие места "+ FreePlaceStand_Up);
-        } else if(place1<seat1) {
+        if (place1 >= seat1 && place1 < placeInTrain) {
+            FreePlaceStand_Up = placeInTrain - place1;
+            System.out.println("В вагоне остались стоячие места " + FreePlaceStand_Up);
+        } else if (place1 < seat1) {
             seat1 = seat1 - place1;
             System.out.println("В вагоне есть сидячие места " + seat1);
-        } else if(place1 >= placeInTrain) {
+        } else if (place1 >= placeInTrain) {
             System.out.println("В вагоне нет мест");
         }
 
@@ -109,11 +109,11 @@ public class Main {
         //А если человеку больше 24, то ему пора ходить на работу
         System.out.println("Задание №2.1");
         byte old = 24;
-        if(old >= 2 && old <= 6){
+        if (old >= 2 && old <= 6) {
             System.out.println("Если возраст человека равен " + old + ", то ему нужно ходить в детский сад}");
-        } else  if (old >= 7 && old <= 18) {
+        } else if (old >= 7 && old <= 18) {
             System.out.println("Если возраст человека равен " + old + ",то ему нужно ходить в школу ");
-        } else if(old > 18 && old <= 24){
+        } else if (old > 18 && old <= 24) {
             System.out.println("Если возраст человека равен " + old + ", то ему нужно ходить в университет");
         } else {
             System.out.println("Если возраст человека равен " + old + ", то ему нужно искать работу");
@@ -130,9 +130,9 @@ public class Main {
         // кататься одному или в сопровождении взрослого в зависимости от того, сколько ему лет.
         System.out.println("Задание №2.2");
         byte children = 14; // возраст ребенка
-        if(children > 5 && children < 14){
+        if (children > 5 && children < 14) {
             System.out.println("Можно кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя");
-        } else if(children <= 5) {
+        } else if (children <= 5) {
             System.out.println("Ребенок не может кататься на аттракционе");
         } else {
             System.out.println("Можно кататься без сопровождения взрослого");
@@ -144,18 +144,20 @@ public class Main {
         // которая вычисляет, какое из трех чисел большее и выводит результат в консоль.
         System.out.println("Задание №2.3");
         int one = 52;
-        int two = 300;
+        int two = 50;
         int free = 52;
-        if(one > two && one > free) {
+        if (one > two && one > free) {
             System.out.println("Переменная one больше");
-        } else if(two>one && two>free) {
+        } else if (two > one && two > free) {
             System.out.println("Переменная two больше");
-        } else if (free>one && free>two) {
+        } else if (free > one && free > two) {
             System.out.println("Переменная free больше");
-        } else if(one == two & one > free) {
-            System.out.println("Переменные one и two равны и имеюют большее значение");
+        } else if (one == two & one > free) {
+            System.out.println("Переменные one и two равны и имеют большее значение");
         } else if (two == free & two > one) {
-            System.out.println("Переменные two и free равны и имеюют большее значение");
+            System.out.println("Переменные two и free равны и имеют большее значение");
+        } else if (one==free & free > two){
+            System.out.println("Переменные one и free равны и имеют большее значение");
         } else {
             System.out.println("Переменные one, two, free равны");
         }
